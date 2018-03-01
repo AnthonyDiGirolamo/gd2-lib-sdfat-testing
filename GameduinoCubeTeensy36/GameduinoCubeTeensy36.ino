@@ -233,7 +233,7 @@ void draw_faces(int dir)
     long area = (x1 - x3) * (y2 - y1) - (x1 - x2) * (y3 - y1);
     byte face = (area < 0);
     if (face == dir) {
-      uint16_t r = 20, g = 20, b = 80;  // Ambient
+      uint16_t r = 120, g = 120, b = 180;  // Ambient
 
       if (face) {
         transform_normal(nx, ny, nz);
@@ -357,7 +357,8 @@ void loop()
 
   GD.Clear();
   GD.SaveContext();         // {
-  GD.ColorRGB(0x605040);
+  // GD.ColorRGB(0x605040);
+  GD.ColorRGB(0xffffff);
   background.wallpaper();
   GD.RestoreContext();      // }
 
